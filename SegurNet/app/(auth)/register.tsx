@@ -56,13 +56,13 @@ export default function RegisterScreen() {
       <Text style={styles.titulo}>Crear Cuenta</Text>
 
       <Text style={styles.label}>Nombres:</Text>
-      <TextInput style={styles.input} placeholder="Ej. Juan" value={nombres} onChangeText={setNombres} />
+      <TextInput style={styles.input} placeholder="Ej. Fulano" value={nombres} onChangeText={setNombres} />
 
       <Text style={styles.label}>Apellidos:</Text>
-      <TextInput style={styles.input} placeholder="Ej. Pérez" value={apellidos} onChangeText={setApellidos} />
+      <TextInput style={styles.input} placeholder="Ej. De Tal" value={apellidos} onChangeText={setApellidos} />
 
       <Text style={styles.label}>Tipo de Documento:</Text>
-      <TextInput style={styles.input} placeholder="DNI, CE, etc." value={tipoDocumento} onChangeText={setTipoDocumento} />
+      <TextInput style={styles.input} placeholder="DNI" value={tipoDocumento} onChangeText={setTipoDocumento} />
 
       <Text style={styles.label}>Número de Documento:</Text>
       <TextInput style={styles.input} placeholder="Número" value={numeroDocumento} onChangeText={setNumeroDocumento} />
@@ -88,12 +88,22 @@ export default function RegisterScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 24, justifyContent: 'center', backgroundColor: '#fff' },
-  logoContainer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 20 },
-  icono: { width: 30, height: 30, marginRight: 8 },
-  nombreApp: { fontSize: 22, fontWeight: 'bold' },
+  container: {
+    flex: 1,
+    padding: 24,
+    justifyContent: 'center',
+    backgroundColor: '#fff' },
+
+  logoContainer: { 
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: 20 },
+
+  icono: { width: 50, height: 50, marginRight: 8 },
+  nombreApp: { fontSize: 32, fontWeight: 'bold' },
   avatar: { width: 100, height: 100, alignSelf: 'center', marginBottom: 16 },
-  titulo: { fontSize: 20, fontWeight: 'bold', textAlign: 'center', marginBottom: 16 },
+  titulo: { fontSize: 32, fontWeight: 'bold', textAlign: 'center', marginBottom: 16 },
   label: { fontSize: 14, marginBottom: 4 },
   input: { borderWidth: 1, borderColor: '#aaa', borderRadius: 8, padding: 10, marginBottom: 12 },
   boton: { backgroundColor: '#000', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 8 },

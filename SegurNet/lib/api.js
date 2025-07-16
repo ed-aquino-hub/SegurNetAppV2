@@ -43,12 +43,12 @@ export async function registrarUsuario(usuario) {
   return await response.json();
 }
 
-export async function registrarHistorial(usuario_id, tipoEmergencia, ubicacion) {
+export async function registrarHistorial(data) {
   try {
     const response = await fetch(`${API_URL}/api/historial`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ usuario_id, tipoEmergencia, ubicacion }),
+      body: JSON.stringify(data),
     });
 
     if (!response.ok) {
@@ -58,10 +58,11 @@ export async function registrarHistorial(usuario_id, tipoEmergencia, ubicacion) 
 
     return await response.json();
   } catch (error) {
-    console.error('❌ registrarHistorial falló:', error);
+    console.error("❌ registrarHistorial falló:", error);
     throw error;
   }
 }
+
 
 
 
